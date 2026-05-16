@@ -3,6 +3,7 @@ package com.example.surge.streams;
 import com.example.surge.model.RideRequest;
 import com.example.surge.model.SurgeEvent;
 
+import com.example.surge.model.SurgeState;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.common.utils.Bytes;
 
@@ -51,7 +52,7 @@ public class RideRequestStreamProcessor {
 
                         Serdes.String(),
 
-                        Serdes.Long()
+                        new JsonSerde<>(SurgeState.class)
 
                 )
 

@@ -7,7 +7,7 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
     streams:
-      application-id: surge-detection-app
+      application-id: surge-detection-app-v2
       bootstrap-servers: localhost:9092
       properties:
 
